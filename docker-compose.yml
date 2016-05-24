@@ -1,0 +1,23 @@
+version: '2'
+services:
+  riak1:
+    image: garland/riak-ts:1.3.0-1
+    ports:
+     - "8098:8098"
+    environment:
+      IS_FIRST_NODE: 'true'
+
+
+  riak2:
+    image: garland/riak-ts:1.3.0-1
+    depends_on:
+      - riak1
+    environment:
+      IS_FIRST_NODE: 'false'
+
+  riak3:
+    image: garland/riak-ts:1.3.0-1
+    depends_on:
+      - riak1
+    environment:
+      IS_FIRST_NODE: 'false'
