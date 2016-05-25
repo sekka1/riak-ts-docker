@@ -3,6 +3,12 @@ riak-ts
 
 Runs the Riak-ts cluster in a Docker containers
 
+## Starting the cluster with docker-compose
+
+```bash
+docker-compose up
+```
+
 ## Running locally on one machine or on your laptop
 This will start a 3 node cluster
 
